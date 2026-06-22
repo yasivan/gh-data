@@ -46,7 +46,7 @@ jobs:
       - name: output contents
         run: ls
       - name: Output filename
-        run: echo "$ {{ needs.build.outputs.script }}"
+        run: echo "${{ needs.build.outputs.script-file }}"
 
 
   
