@@ -1,0 +1,15 @@
+name: deploy website
+on: 
+  push:
+    branches: main
+jobs:
+  test:
+  runs-on: ubuntu-latest
+  steps:
+    - name: get code
+      uses: actions/checkout@v3
+    - name: install dependencies
+      uses: npm ci
+    - name: deploy code
+      run: echo " deploying code"
+      
