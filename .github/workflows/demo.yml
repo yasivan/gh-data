@@ -13,7 +13,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.npm
-          key: deps-node-modules-${{ hashfiless('**/package-lock.json') }}
+          key: deps-node-modules-${{ hashfiles('**/package-lock.json') }}
       - name: install dependencies
         run: npm ci
       - name: lint code
@@ -32,7 +32,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.npm
-          key: deps-node-modules-${{ hashfiless('**/package-lock.json') }}        
+          key: deps-node-modules-${{ hashfiles('**/package-lock.json') }}        
       - name: install dependencies
         run: npm ci
       - name: build website
